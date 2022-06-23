@@ -13,24 +13,12 @@ html {
     font-size: 100%;
 }
 
-header {
-    position: absolute;
-    top: 0;
-    right: 0;
-    left: 0;
-    padding: 20px 120px 0 120px;
-    display: grid;
-    grid-template-columns: auto auto auto 0.5fr;
-    grid-template-areas: "logo phones phones button";
-    grid-gap: 30px;
-}
-
 #nav li {
     display: inline-block;
     line-height: 53px;
     /* background-color: green; */
     justify-content: center;
-    width: 70px;
+    width: 80px;
     box-sizing: border-box;
     height: 55px;
     text-align: center;
@@ -64,19 +52,24 @@ iframe {
 .header__logo {
     width: 126px;
     height: 46px;
-    text-align: center;
+    margin-left: 30%;
 }
 
-.header__phones {
-    grid-area: phones;
-    display: grid;
-    grid-template-columns: auto auto;
-    grid-gap: 30px;
+.menu {
+    width: 100%;
 }
 
-.header__phone {
-    display: flex;
-    align-items: center;
+.menu-list {
+    position: absolute;
+    margin-left: 150%;
+}
+
+.menu-item {
+    color: #000;
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+    width: 80px;
 }
 
 .heading {
@@ -87,35 +80,36 @@ iframe {
     margin-bottom: 55px;
 }
 
-.phone__icon {
-    width: 40px;
-    height: 40px;
+.bar {
+    position: relative;
+    width: 100%;
 }
 
-.phone__text {
-    margin-left: 10px;
-    color: #221f1f;
-}
-
-.phone__name {
-    font-family: "Roboto";
-    font-size: 14px;
-    font-weight: 500;
-}
-
-.phone__number {
-    font-size: 22px;
-    font-weight: bold;
+header {
+    position: absolute;
+    padding: 20px 0;
 }
 
 .header__button-area {
-    grid-area: button;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
+    position: absolute;
+    right: 10%;
 }
 
 .header__button {
+    position: relative;
+    min-width: 130px;
+    height: 55px;
+    background: #00cec9;
+    padding: 0 32px;
+    border: none;
+    border-radius: 30px;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.register__button {
+    position: relative;
     min-width: 130px;
     height: 55px;
     background: #00cec9;
@@ -129,35 +123,11 @@ iframe {
 
 .hero {
     height: 650px;
-    padding: 0 120px;
-    background-image: url(/assets/img/Background-human.png);
-    background-position: center;
-    background-size: cover;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
     width: 100%;
 }
 
-.hero__text {
-    max-width: 542px;
-    margin-top: 3rem;
-}
-
-.hero__title {
-    font-size: 32px;
-    font-weight: 800;
-    line-height: 44px;
-    text-transform: uppercase;
-    margin-bottom: 34px;
-}
-
-.hero__description {
-    font-size: 18px;
-    font-family: "Roboto";
-    font-weight: 500;
-    line-height: 28px;
-    margin-bottom: 0;
+.hero_background img {
+    width: 100%;
 }
 
 .question {
@@ -415,19 +385,6 @@ iframe {
     line-height: 21px;
 }
 
-.register__button {
-    width: 170px;
-    height: 64px;
-    background: #00cec9;
-    border-radius: 100px;
-    border: none;
-    color: #fff;
-    margin-left: -182px;
-    font-size: 18px;
-    font-weight: 500;
-    line-height: 21px;
-}
-
 .carousel {
     padding: 55px 120px 188px 120px;
 }
@@ -634,7 +591,7 @@ iframe {
     color: #242424;
 }
 
-.swiper {
+.icon_swiper {
     right: 1rem;
     width: 1300px;
     height: 400px;
@@ -642,7 +599,7 @@ iframe {
     justify-content: center;
 }
 
-.swiper-slide {
+.icon_slide {
     width: 273px;
     height: 300px;
     position: absolute;
@@ -652,14 +609,14 @@ iframe {
     padding-bottom: 30px;
 }
 
-.swiper-slide img {
+.icon_slide img {
     display: block;
     width: 273px;
     height: 207px;
     object-fit: cover;
 }
 
-.swiper-slide p {
+.icon_slide p {
     width: 273px;
     font-weight: 500px;
     align-items: center;
@@ -667,4 +624,13 @@ iframe {
     margin-top: 25px;
     font-weight: 600;
     line-height: 20px;
+}
+
+.hero .hero_background img {
+    position: relative;
+    z-index: -99999;
+}
+
+.header {
+    z-index: 999999;
 }
